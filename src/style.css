@@ -1,6 +1,94 @@
+@import 'tailwindcss';
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Fonts */
 .font-bebas-neue {
-  font-family: 'Bebas Neue', serif;
+  @apply font-[Bebas_Neue];
 }
 .font-roboto {
-  font-family: 'Roboto', serif;
+  @apply font-[Roboto];
+}
+
+/* Header Section */
+.header {
+  @apply bg-[#FFFBF0] lg:px-32 lg:pt-5 px-4 pt-4;
+}
+/* navbar */
+.nav {
+  @apply flex justify-between items-center;
+}
+.nav-links {
+  @apply hidden lg:flex justify-end space-x-14 w-3/4 text-[#3C3C3C] font-medium;
+}
+/* banner */
+.banner {
+  @apply flex lg:items-center lg:justify-between mt-12 max-lg:flex-col-reverse;
+}
+.banner-title {
+  @apply font-[font-bebas-neue] text-7xl uppercase lg:text-left text-center;
+}
+.banner-description {
+  @apply text-[#3E3E3E] mb-2 lg:text-left text-center;
+}
+.btn-banner {
+  @apply bg-linear-to-r from-[#A4BC46] to-[#85A019] flex items-center text-base px-8 py-4 text-white rounded-lg;
+}
+.banner-btn-container {
+  @apply lg:block flex justify-center mb-6;
+}
+
+/* Main Section */
+.main {
+  @apply max-w-6xl mx-auto;
+}
+
+/* Products Section */
+.products {
+  @apply mt-24 px-4;
+}
+.product-title {
+  @apply font-[font-bebas-neue] uppercase text-[#363958] text-5xl mb-6 lg:text-left text-center;
+}
+.products-container {
+  @apply lg:grid grid-cols-3 gap-7 max-lg:space-y-7;
+}
+.product-card {
+  @apply flex justify-center p-5 rounded-2xl bg-white drop-shadow-md;
+}
+.product-img {
+  @apply p-5 rounded-2xl bg-[#F1F1F1];
+}
+.card-title {
+  @apply text-[#363958] text-2xl font-bold mt-5;
+}
+.card-description {
+  @apply my-3 text-[#3E3E3E];
+}
+.card-price-container {
+  @apply flex items-center justify-between;
+}
+.card-price {
+  @apply text-[#FABE4C] text-4xl font-black;
+}
+.card-btn {
+  @apply bg-linear-to-r from-[#A4BC46] to-[#85A019] flex items-center text-base px-8 py-4 text-white rounded-lg;
+}
+
+/* Service Section */
+.service {
+  @apply flex mt-32 mb-48 px-4 gap-20 items-center max-lg:flex-col-reverse;
+}
+.service-content {
+  @apply lg:w-1/2 space-y-4;
+}
+.services-container {
+  @apply flex gap-9 items-center p-3 bg-white rounded-2xl drop-shadow-md;
+}
+.service-title {
+  @apply text-[#363958] text-2xl font-bold;
+}
+.service-description {
+  @apply text-[#3E3E3E] mt-3;
 }
